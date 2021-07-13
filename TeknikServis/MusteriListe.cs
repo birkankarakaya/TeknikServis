@@ -15,6 +15,7 @@ namespace TeknikServis
     {
         sqlbaglantisi bgl = new sqlbaglantisi();
         Rapor rapor = new Rapor();
+        
 
         public MusteriListe()
         {
@@ -36,9 +37,9 @@ namespace TeknikServis
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
+
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -83,7 +84,7 @@ namespace TeknikServis
         private void MusteriListe_Load(object sender, EventArgs e)
         {
             DataTable dt1 = new DataTable();
-            SqlDataAdapter da1 = new SqlDataAdapter("Select * From Musteri", bgl.baglanti());
+            SqlDataAdapter da1 = new SqlDataAdapter("Select ID,FirmaAdi,Ad,Soyad,Telefon,Email,Adres,Ilce,Il From Musteri", bgl.baglanti());
             da1.Fill(dt1);
             dataGridView1.DataSource = dt1;
             cmbGrup.Text = "";
@@ -115,14 +116,12 @@ namespace TeknikServis
         {
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
             rapor.unvan = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
-            rapor.yetkili = dataGridView1.Rows[secilen].Cells[7].Value.ToString() +" "+ dataGridView1.Rows[secilen].Cells[8].Value.ToString();
-            rapor.adres = dataGridView1.Rows[secilen].Cells[13].Value.ToString();
-            rapor.ilce = dataGridView1.Rows[secilen].Cells[14].Value.ToString();
-            rapor.il = dataGridView1.Rows[secilen].Cells[15].Value.ToString();
-            rapor.telefon = dataGridView1.Rows[secilen].Cells[9].Value.ToString();
-            rapor.email = dataGridView1.Rows[secilen].Cells[10].Value.ToString();
-            rapor.vergidairesi = dataGridView1.Rows[secilen].Cells[16].Value.ToString();
-            rapor.vergino = dataGridView1.Rows[secilen].Cells[17].Value.ToString();
+            rapor.yetkili = dataGridView1.Rows[secilen].Cells[2].Value.ToString() +" "+ dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            rapor.adres = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
+            rapor.ilce = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
+            rapor.il = dataGridView1.Rows[secilen].Cells[8].Value.ToString();
+            rapor.telefon = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            rapor.email = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
             rapor.Show();
         }
 
@@ -153,6 +152,21 @@ namespace TeknikServis
             Musteri musteri = new Musteri();
             musteri.Show();
             this.Close();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Rapor rapor = new Rapor();
+            rapor.Show();
+            this.Close();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            MusteriDetay musteriDetay = new MusteriDetay();
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            musteriDetay.id = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            musteriDetay.Show();
         }
     }
 }

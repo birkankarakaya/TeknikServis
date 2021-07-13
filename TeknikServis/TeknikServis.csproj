@@ -81,6 +81,12 @@
     <Compile Include="Musteri.Designer.cs">
       <DependentUpon>Musteri.cs</DependentUpon>
     </Compile>
+    <Compile Include="MusteriDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriDetay.Designer.cs">
+      <DependentUpon>MusteriDetay.cs</DependentUpon>
+    </Compile>
     <Compile Include="MusteriListe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,12 @@
     </Compile>
     <Compile Include="Rapor.Designer.cs">
       <DependentUpon>Rapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporDetay.Designer.cs">
+      <DependentUpon>RaporDetay.cs</DependentUpon>
     </Compile>
     <Compile Include="ServisKayıtları.cs">
       <SubType>Form</SubType>
@@ -132,6 +144,9 @@
     <EmbeddedResource Include="Musteri.resx">
       <DependentUpon>Musteri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MusteriDetay.resx">
+      <DependentUpon>MusteriDetay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MusteriListe.resx">
       <DependentUpon>MusteriListe.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +164,9 @@
     </Compile>
     <EmbeddedResource Include="Rapor.resx">
       <DependentUpon>Rapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporDetay.resx">
+      <DependentUpon>RaporDetay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ServisKayıtları.resx">
       <DependentUpon>ServisKayıtları.cs</DependentUpon>

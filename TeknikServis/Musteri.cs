@@ -77,7 +77,7 @@ namespace TeknikServis
         private void groupBox3_Enter(object sender, EventArgs e)
         {
             DataTable dt1 = new DataTable();
-            SqlDataAdapter da1 = new SqlDataAdapter("Select * From Musteri", bgl.baglanti());
+            SqlDataAdapter da1 = new SqlDataAdapter("Select ID,FirmaAdi,Ad,Soyad,Telefon,Email,Adres,Ilce,Il From Musteri", bgl.baglanti());
             da1.Fill(dt1);
             dataGridView1.DataSource = dt1;
         }

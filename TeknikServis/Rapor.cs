@@ -48,8 +48,7 @@ namespace TeknikServis
             kaydet.Parameters.AddWithValue("@r5", txtIl.Text);
             kaydet.Parameters.AddWithValue("@r6", mskTelefon.Text);
             kaydet.Parameters.AddWithValue("@r7", txtEmail.Text);
-            kaydet.Parameters.AddWithValue("@r8", txtVergiDairesi.Text);
-            kaydet.Parameters.AddWithValue("@r9", txtVergiNo.Text);
+            
             kaydet.Parameters.AddWithValue("@r10", txtSeriNo.Text);
             kaydet.Parameters.AddWithValue("@r11", txtBarkodNo.Text);
             kaydet.Parameters.AddWithValue("@r12", cmbCihaz.Text);
@@ -59,7 +58,7 @@ namespace TeknikServis
             kaydet.Parameters.AddWithValue("@r16", txtYapilanIslem.Text.ToString());
             kaydet.Parameters.AddWithValue("@r17", Convert.ToDateTime(dtAlinanTarih.Value));
             kaydet.Parameters.AddWithValue("@r18", Convert.ToDateTime(dtEdilenTarih.Value));
-            kaydet.Parameters.AddWithValue("@r19", txtTutar.Text);
+            
             kaydet.Parameters.AddWithValue("@r20", chcDegisim.Checked);
             kaydet.Parameters.AddWithValue("@r21", chcAksesuar.Checked);
             kaydet.Parameters.AddWithValue("@r22", rtxtAciklama.Text);
@@ -82,10 +81,7 @@ namespace TeknikServis
             txtIl.Text = il;
             mskTelefon.Text = telefon;
             txtEmail.Text = email;
-            txtVergiDairesi.Text = vergidairesi;
-            txtVergiNo.Text = vergino;
 
-            
             // TODO: Bu kod satırı 'admin_TeknikServisDataSet.Cihaz' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.cihazTableAdapter.Fill(this.admin_TeknikServisDataSet.Cihaz);
 
@@ -105,13 +101,58 @@ namespace TeknikServis
             }
 
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select* From Rapor", bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select ID, Unvan,Yetkili,Adres,Ilce,Il,Telefon,CihazSeriNo,Marka,Model,Durum From Rapor ORDER BY AlinanTarih DESC", bgl.baglanti());
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+
+
+            //Gelen Verileri koşullu renklendirme
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                DataGridViewCellStyle renk = new DataGridViewCellStyle();
+                if ((dataGridView1.Rows[i].Cells[10].Value.ToString()) == "Tamamlandı     ")
+                {
+                    renk.BackColor = Color.LightGreen;
+                }
+                else if ((dataGridView1.Rows[i].Cells[10].Value.ToString()) == "Onay bekliyor  ")
+                {
+                    renk.BackColor = Color.Yellow;
+                }
+                else if ((dataGridView1.Rows[i].Cells[10].Value.ToString()) == "Teslim Edildi  ")
+                {
+                    renk.BackColor = Color.LightSkyBlue;
+                }
+                else if ((dataGridView1.Rows[i].Cells[10].Value.ToString()) == "Teslim Alındı  ")
+                {
+                    renk.BackColor = Color.LightPink;
+                }
+                dataGridView1.Rows[i].DefaultCellStyle = renk;
+            }
+
+
+
+
+        }
+
+        public string unvan, yetkili, adres, ilce, il, telefon, email;
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             
         }
 
-        public string unvan, yetkili, adres, ilce, il, telefon, email, vergidairesi, vergino;
+        private void btnRaporDetay_Click(object sender, EventArgs e)
+        {
+            RaporDetay raporDetay = new RaporDetay();
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            raporDetay.id = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            raporDetay.Show();
+        }
+
+        private void Kayıtlar_Enter(object sender, EventArgs e)
+        {
+
+        }
 
         private void cmbDurum_SelectedIndexChanged(object sender, EventArgs e)
         {

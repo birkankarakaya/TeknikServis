@@ -101,11 +101,11 @@
             this.btnMusteri.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMusteri.Image = ((System.Drawing.Image)(resources.GetObject("btnMusteri.Image")));
             this.btnMusteri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMusteri.Location = new System.Drawing.Point(6, 309);
+            this.btnMusteri.Location = new System.Drawing.Point(6, 77);
             this.btnMusteri.Name = "btnMusteri";
             this.btnMusteri.Size = new System.Drawing.Size(143, 52);
             this.btnMusteri.TabIndex = 8;
-            this.btnMusteri.Text = "Müşteriler";
+            this.btnMusteri.Text = "Müşteri Ekle";
             this.btnMusteri.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMusteri.UseVisualStyleBackColor = false;
             this.btnMusteri.Click += new System.EventHandler(this.button5_Click_2);
@@ -116,7 +116,7 @@
             this.btnPersonel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnPersonel.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonel.Image")));
             this.btnPersonel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonel.Location = new System.Drawing.Point(6, 251);
+            this.btnPersonel.Location = new System.Drawing.Point(6, 309);
             this.btnPersonel.Name = "btnPersonel";
             this.btnPersonel.Size = new System.Drawing.Size(143, 52);
             this.btnPersonel.TabIndex = 7;
@@ -131,7 +131,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(6, 193);
+            this.button2.Location = new System.Drawing.Point(6, 251);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 52);
             this.button2.TabIndex = 6;
@@ -160,7 +160,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(6, 135);
+            this.button4.Location = new System.Drawing.Point(6, 193);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(143, 52);
             this.button4.TabIndex = 1;
@@ -175,11 +175,11 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(6, 77);
+            this.button3.Location = new System.Drawing.Point(6, 135);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 52);
             this.button3.TabIndex = 0;
-            this.button3.Text = "Yeni Kayıt Oluştur";
+            this.button3.Text = "Yeni Servis Kaydı";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -306,14 +306,14 @@
             // müşteriListesiToolStripMenuItem
             // 
             this.müşteriListesiToolStripMenuItem.Name = "müşteriListesiToolStripMenuItem";
-            this.müşteriListesiToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.müşteriListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.müşteriListesiToolStripMenuItem.Text = "Müşteri Listesi";
             this.müşteriListesiToolStripMenuItem.Click += new System.EventHandler(this.müşteriListesiToolStripMenuItem_Click);
             // 
             // müşteriEkleToolStripMenuItem
             // 
             this.müşteriEkleToolStripMenuItem.Name = "müşteriEkleToolStripMenuItem";
-            this.müşteriEkleToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.müşteriEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.müşteriEkleToolStripMenuItem.Text = "Müşteri Ekle";
             this.müşteriEkleToolStripMenuItem.Click += new System.EventHandler(this.müşteriEkleToolStripMenuItem_Click);
             // 
