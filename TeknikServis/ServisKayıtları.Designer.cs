@@ -35,13 +35,14 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dtTarih = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.txtYetkili = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dtTarih = new System.Windows.Forms.DateTimePicker();
+            this.btnRaporDetay = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -136,6 +137,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kayıt Ara";
             // 
+            // dtTarih
+            // 
+            this.dtTarih.Location = new System.Drawing.Point(83, 65);
+            this.dtTarih.Name = "dtTarih";
+            this.dtTarih.Size = new System.Drawing.Size(200, 20);
+            this.dtTarih.TabIndex = 5;
+            // 
             // button2
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -192,12 +200,19 @@
             this.dataGridView1.Size = new System.Drawing.Size(1173, 542);
             this.dataGridView1.TabIndex = 0;
             // 
-            // dtTarih
+            // btnRaporDetay
             // 
-            this.dtTarih.Location = new System.Drawing.Point(83, 65);
-            this.dtTarih.Name = "dtTarih";
-            this.dtTarih.Size = new System.Drawing.Size(200, 20);
-            this.dtTarih.TabIndex = 5;
+            this.btnRaporDetay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnRaporDetay.Image = ((System.Drawing.Image)(resources.GetObject("btnRaporDetay.Image")));
+            this.btnRaporDetay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRaporDetay.Location = new System.Drawing.Point(581, 115);
+            this.btnRaporDetay.Name = "btnRaporDetay";
+            this.btnRaporDetay.Size = new System.Drawing.Size(131, 29);
+            this.btnRaporDetay.TabIndex = 56;
+            this.btnRaporDetay.Text = "Rapor Detay";
+            this.btnRaporDetay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRaporDetay.UseVisualStyleBackColor = true;
+            this.btnRaporDetay.Click += new System.EventHandler(this.btnRaporDetay_Click);
             // 
             // ServisKayıtları
             // 
@@ -206,6 +221,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1344, 711);
             this.ControlBox = false;
+            this.Controls.Add(this.btnRaporDetay);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -239,5 +255,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dtTarih;
+        private System.Windows.Forms.Button btnRaporDetay;
     }
 }

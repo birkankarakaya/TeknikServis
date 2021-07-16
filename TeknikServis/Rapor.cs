@@ -39,8 +39,9 @@ namespace TeknikServis
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SqlCommand kaydet = new SqlCommand("insert into Rapor (Unvan,Yetkili,Adres,Ilce,Il,Telefon,Email,VergiDairesi,VergiNo,CihazSeriNo,CihazBarkodNo,Marka,Model,TeslimAlan,TeslimEden,YapilanIslem,AlinanTarih,TeslimEdilenTarih,Tutar,DegisimYapildiMi,Aksesuar,Aciklama,Durum) values " +
-                "(@r1,@r2,@r3,@r4,@r5,@r6,@r7,@r8,@r9,@r10,@r11,@r12,@r13,@r14,@r15,@r16,@r17,@r18,@r19,@r20,@r21,@r22,@r23)", bgl.baglanti());
+            SqlCommand kaydet = new SqlCommand("insert into Rapor " +
+                "(Unvan,Yetkili,Adres,Ilce,Il,Telefon,Email,CihazSeriNo,CihazBarkodNo,Marka,Model,TeslimAlan,TeslimEden,YapilanIslem,AlinanTarih,TeslimEdilenTarih,DegisimYapildiMi,Aksesuar,Aciklama,Durum,Tutar) values " +
+                "(@r1,@r2,@r3,@r4,@r5,@r6,@r7,@r8,@r9,@r10,@r11,@r12,@r13,@r14,@r15,@r16,@r17,@r18,@r19,@r20,@r21)", bgl.baglanti());
             kaydet.Parameters.AddWithValue("@r1", txtUnvan.Text);
             kaydet.Parameters.AddWithValue("@r2", txtYetkili.Text);
             kaydet.Parameters.AddWithValue("@r3", rtxtAdres.Text);
@@ -49,20 +50,22 @@ namespace TeknikServis
             kaydet.Parameters.AddWithValue("@r6", mskTelefon.Text);
             kaydet.Parameters.AddWithValue("@r7", txtEmail.Text);
             
-            kaydet.Parameters.AddWithValue("@r10", txtSeriNo.Text);
-            kaydet.Parameters.AddWithValue("@r11", txtBarkodNo.Text);
-            kaydet.Parameters.AddWithValue("@r12", cmbCihaz.Text);
-            kaydet.Parameters.AddWithValue("@r13", cmbModel.Text);
-            kaydet.Parameters.AddWithValue("@r14", cmbPersonel.Text);
-            kaydet.Parameters.AddWithValue("@r15", txtTeslimEden.Text);
-            kaydet.Parameters.AddWithValue("@r16", txtYapilanIslem.Text.ToString());
-            kaydet.Parameters.AddWithValue("@r17", Convert.ToDateTime(dtAlinanTarih.Value));
-            kaydet.Parameters.AddWithValue("@r18", Convert.ToDateTime(dtEdilenTarih.Value));
+            kaydet.Parameters.AddWithValue("@r8", txtSeriNo.Text);
+            kaydet.Parameters.AddWithValue("@r9", txtBarkodNo.Text);
+            kaydet.Parameters.AddWithValue("@r10", cmbCihaz.Text);
+            kaydet.Parameters.AddWithValue("@r11", cmbModel.Text);
+            kaydet.Parameters.AddWithValue("@r12", cmbPersonel.Text);
+            kaydet.Parameters.AddWithValue("@r13", txtTeslimEden.Text);
+            kaydet.Parameters.AddWithValue("@r14", txtYapilanIslem.Text.ToString());
+            kaydet.Parameters.AddWithValue("@r15", Convert.ToDateTime(dtAlinanTarih.Value));
+            kaydet.Parameters.AddWithValue("@r16", Convert.ToDateTime(dtEdilenTarih.Value));
             
-            kaydet.Parameters.AddWithValue("@r20", chcDegisim.Checked);
-            kaydet.Parameters.AddWithValue("@r21", chcAksesuar.Checked);
-            kaydet.Parameters.AddWithValue("@r22", rtxtAciklama.Text);
-            kaydet.Parameters.AddWithValue("@r23", cmbDurum.Text);
+            kaydet.Parameters.AddWithValue("@r17", chcDegisim.Checked);
+            kaydet.Parameters.AddWithValue("@r18", chcAksesuar.Checked);
+            kaydet.Parameters.AddWithValue("@r19", rtxtAciklama.Text);
+            
+            kaydet.Parameters.AddWithValue("@r20", cmbDurum.Text);
+            kaydet.Parameters.AddWithValue("@r21", Convert.ToDecimal(txtTutar.Text));
             kaydet.ExecuteNonQuery();
             MessageBox.Show("Kaydınız gerçekleşmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

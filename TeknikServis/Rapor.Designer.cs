@@ -83,6 +83,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbCihaz = new System.Windows.Forms.ComboBox();
             this.cihazTableAdapter = new TeknikServis.admin_TeknikServisDataSetTableAdapters.CihazTableAdapter();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTutar = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Kayıtlar.SuspendLayout();
@@ -136,6 +138,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtTutar);
             this.groupBox1.Controls.Add(this.btnRaporDetay);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.rtxtAksesuar);
@@ -215,7 +219,7 @@
             // 
             this.rtxtAksesuar.Location = new System.Drawing.Point(1046, 76);
             this.rtxtAksesuar.Name = "rtxtAksesuar";
-            this.rtxtAksesuar.Size = new System.Drawing.Size(203, 76);
+            this.rtxtAksesuar.Size = new System.Drawing.Size(200, 50);
             this.rtxtAksesuar.TabIndex = 53;
             this.rtxtAksesuar.Text = "";
             // 
@@ -284,7 +288,7 @@
             // cmbDurum
             // 
             this.cmbDurum.FormattingEnabled = true;
-            this.cmbDurum.Location = new System.Drawing.Point(1046, 240);
+            this.cmbDurum.Location = new System.Drawing.Point(1046, 188);
             this.cmbDurum.Name = "cmbDurum";
             this.cmbDurum.Size = new System.Drawing.Size(203, 21);
             this.cmbDurum.TabIndex = 23;
@@ -293,7 +297,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(1003, 243);
+            this.label20.Location = new System.Drawing.Point(1003, 191);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(38, 13);
             this.label20.TabIndex = 45;
@@ -302,7 +306,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(991, 162);
+            this.label19.Location = new System.Drawing.Point(991, 136);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(50, 13);
             this.label19.TabIndex = 44;
@@ -310,9 +314,9 @@
             // 
             // rtxtAciklama
             // 
-            this.rtxtAciklama.Location = new System.Drawing.Point(1046, 158);
+            this.rtxtAciklama.Location = new System.Drawing.Point(1046, 132);
             this.rtxtAciklama.Name = "rtxtAciklama";
-            this.rtxtAciklama.Size = new System.Drawing.Size(203, 76);
+            this.rtxtAciklama.Size = new System.Drawing.Size(200, 50);
             this.rtxtAciklama.TabIndex = 22;
             this.rtxtAciklama.Text = "";
             // 
@@ -598,6 +602,23 @@
             // 
             this.cihazTableAdapter.ClearBeforeFill = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1008, 223);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 13);
+            this.label8.TabIndex = 56;
+            this.label8.Text = "Tutar";
+            // 
+            // txtTutar
+            // 
+            this.txtTutar.Location = new System.Drawing.Point(1046, 220);
+            this.txtTutar.Name = "txtTutar";
+            this.txtTutar.Size = new System.Drawing.Size(203, 20);
+            this.txtTutar.TabIndex = 57;
+            this.txtTutar.Text = "0.00";
+            // 
             // Rapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -679,5 +700,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtxtAksesuar;
         private System.Windows.Forms.Button btnRaporDetay;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtTutar;
     }
 }
