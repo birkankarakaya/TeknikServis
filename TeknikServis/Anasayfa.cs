@@ -28,6 +28,7 @@ namespace TeknikServis
             while (dr1.Read())
             {
                 chart1.Series["Islemler"].Points.AddXY(dr1[0], dr1[1]);
+                chart1.Series["Islemler"].Color = Color.Aqua;
             }
             
 
@@ -38,12 +39,13 @@ namespace TeknikServis
             while (dr2.Read())
             {
                 chart2.Series["Musteri"].Points.AddXY(dr2[0], dr2[1]);
+                chart2.Series["Musteri"].Color = Color.Orange;
             }
 
 
             //dgw1
             DataTable dt1 = new DataTable();
-            SqlDataAdapter da1 = new SqlDataAdapter("select *from Rapor where Durum='Onay bekliyor'", bgl.baglanti());
+            SqlDataAdapter da1 = new SqlDataAdapter("select ID, Yetkili, Adres, Ilce, Il, Telefon, Durum from Rapor where Durum='Onay bekliyor'", bgl.baglanti());
             da1.Fill(dt1);
             dataGridView1.DataSource = dt1;
 
@@ -51,7 +53,7 @@ namespace TeknikServis
 
             //dgw2
             DataTable dt2 = new DataTable();
-            SqlDataAdapter da2 = new SqlDataAdapter("select *from Rapor where Durum='Tamamlandı'", bgl.baglanti());
+            SqlDataAdapter da2 = new SqlDataAdapter("select ID, Yetkili, Adres, Ilce, Il, Telefon, Durum from Rapor where Durum='Tamamlandı'", bgl.baglanti());
             da2.Fill(dt2);
             dataGridView2.DataSource = dt2;
         }

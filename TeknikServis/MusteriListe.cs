@@ -138,7 +138,6 @@ namespace TeknikServis
                 komut.Parameters.AddWithValue("@p", dataGridView1.Rows[secilen].Cells[0].Value);
                 komut.ExecuteNonQuery();
                 MessageBox.Show("Kayıt Silme İşleminiz Başarılı!");
-                
             }            
         }
 
@@ -167,6 +166,10 @@ namespace TeknikServis
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
             musteriDetay.id = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
             musteriDetay.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
         }
     }
 }

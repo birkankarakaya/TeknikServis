@@ -201,6 +201,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(617, 350);
             this.dataGridView2.Name = "dataGridView2";
@@ -209,6 +210,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 350);
             this.dataGridView1.Name = "dataGridView1";
@@ -306,14 +308,14 @@
             // müşteriListesiToolStripMenuItem
             // 
             this.müşteriListesiToolStripMenuItem.Name = "müşteriListesiToolStripMenuItem";
-            this.müşteriListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.müşteriListesiToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.müşteriListesiToolStripMenuItem.Text = "Müşteri Listesi";
             this.müşteriListesiToolStripMenuItem.Click += new System.EventHandler(this.müşteriListesiToolStripMenuItem_Click);
             // 
             // müşteriEkleToolStripMenuItem
             // 
             this.müşteriEkleToolStripMenuItem.Name = "müşteriEkleToolStripMenuItem";
-            this.müşteriEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.müşteriEkleToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.müşteriEkleToolStripMenuItem.Text = "Müşteri Ekle";
             this.müşteriEkleToolStripMenuItem.Click += new System.EventHandler(this.müşteriEkleToolStripMenuItem_Click);
             // 

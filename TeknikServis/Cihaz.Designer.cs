@@ -34,6 +34,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbGrup = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.txtMarka = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cmbGrup = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -118,6 +118,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cihaz Ekle";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cmbGrup
+            // 
+            this.cmbGrup.FormattingEnabled = true;
+            this.cmbGrup.Location = new System.Drawing.Point(96, 55);
+            this.cmbGrup.Name = "cmbGrup";
+            this.cmbGrup.Size = new System.Drawing.Size(175, 21);
+            this.cmbGrup.TabIndex = 16;
+            this.cmbGrup.SelectedIndexChanged += new System.EventHandler(this.cmbGrup_SelectedIndexChanged);
             // 
             // button5
             // 
@@ -227,6 +236,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
@@ -234,15 +244,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1027, 627);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // cmbGrup
-            // 
-            this.cmbGrup.FormattingEnabled = true;
-            this.cmbGrup.Location = new System.Drawing.Point(96, 55);
-            this.cmbGrup.Name = "cmbGrup";
-            this.cmbGrup.Size = new System.Drawing.Size(175, 21);
-            this.cmbGrup.TabIndex = 16;
-            this.cmbGrup.SelectedIndexChanged += new System.EventHandler(this.cmbGrup_SelectedIndexChanged);
             // 
             // Cihaz
             // 

@@ -35,6 +35,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTutar = new System.Windows.Forms.TextBox();
             this.btnRaporDetay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.rtxtAksesuar = new System.Windows.Forms.RichTextBox();
@@ -83,8 +85,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbCihaz = new System.Windows.Forms.ComboBox();
             this.cihazTableAdapter = new TeknikServis.admin_TeknikServisDataSetTableAdapters.CihazTableAdapter();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtTutar = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Kayıtlar.SuspendLayout();
@@ -192,6 +192,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Yeni Rapor";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1008, 223);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 13);
+            this.label8.TabIndex = 56;
+            this.label8.Text = "Tutar";
+            // 
+            // txtTutar
+            // 
+            this.txtTutar.Location = new System.Drawing.Point(1046, 220);
+            this.txtTutar.Name = "txtTutar";
+            this.txtTutar.Size = new System.Drawing.Size(203, 20);
+            this.txtTutar.TabIndex = 57;
+            this.txtTutar.Text = "0.00";
+            // 
             // btnRaporDetay
             // 
             this.btnRaporDetay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -237,6 +254,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
@@ -601,23 +619,6 @@
             // cihazTableAdapter
             // 
             this.cihazTableAdapter.ClearBeforeFill = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1008, 223);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(32, 13);
-            this.label8.TabIndex = 56;
-            this.label8.Text = "Tutar";
-            // 
-            // txtTutar
-            // 
-            this.txtTutar.Location = new System.Drawing.Point(1046, 220);
-            this.txtTutar.Name = "txtTutar";
-            this.txtTutar.Size = new System.Drawing.Size(203, 20);
-            this.txtTutar.TabIndex = 57;
-            this.txtTutar.Text = "0.00";
             // 
             // Rapor
             // 

@@ -53,7 +53,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtVergiDairesi = new System.Windows.Forms.TextBox();
-            this.txtWebSitesi = new System.Windows.Forms.TextBox();
+            this.txtWeb = new System.Windows.Forms.TextBox();
             this.rtxtAdres = new System.Windows.Forms.RichTextBox();
             this.cmbIl = new System.Windows.Forms.ComboBox();
             this.cmbIlce = new System.Windows.Forms.ComboBox();
@@ -272,12 +272,12 @@
             this.txtVergiDairesi.Size = new System.Drawing.Size(201, 20);
             this.txtVergiDairesi.TabIndex = 23;
             // 
-            // txtWebSitesi
+            // txtWeb
             // 
-            this.txtWebSitesi.Location = new System.Drawing.Point(106, 337);
-            this.txtWebSitesi.Name = "txtWebSitesi";
-            this.txtWebSitesi.Size = new System.Drawing.Size(201, 20);
-            this.txtWebSitesi.TabIndex = 22;
+            this.txtWeb.Location = new System.Drawing.Point(106, 337);
+            this.txtWeb.Name = "txtWeb";
+            this.txtWeb.Size = new System.Drawing.Size(201, 20);
+            this.txtWeb.TabIndex = 22;
             // 
             // rtxtAdres
             // 
@@ -424,6 +424,7 @@
             this.button7.Text = "Güncelle";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // mskTelefon
             // 
@@ -471,7 +472,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtVergiDairesi);
-            this.Controls.Add(this.txtWebSitesi);
+            this.Controls.Add(this.txtWeb);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtFax);
@@ -529,7 +530,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtVergiDairesi;
-        private System.Windows.Forms.TextBox txtWebSitesi;
+        private System.Windows.Forms.TextBox txtWeb;
         private System.Windows.Forms.RichTextBox rtxtAdres;
         private System.Windows.Forms.ComboBox cmbIl;
         private System.Windows.Forms.ComboBox cmbIlce;

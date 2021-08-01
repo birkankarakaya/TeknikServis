@@ -47,7 +47,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -58,6 +57,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
@@ -279,7 +279,7 @@
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(1006, 115);
+            this.button9.Location = new System.Drawing.Point(902, 115);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(157, 29);
             this.button9.TabIndex = 6;
@@ -288,25 +288,12 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(902, 115);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(98, 29);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Güncelle";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(1169, 115);
+            this.button10.Location = new System.Drawing.Point(1065, 115);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(83, 29);
             this.button10.TabIndex = 1;
@@ -338,7 +325,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button6);
@@ -380,7 +366,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
     }
