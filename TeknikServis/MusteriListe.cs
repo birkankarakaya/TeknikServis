@@ -62,7 +62,7 @@ namespace TeknikServis
             string srg2 = cmbGrup.Text;
             if (cmbGrup.Text != null)
             {
-                string sorgu = "Select * from Musteri where (FirmaAdi like '%" + srg + "%' OR Ad Like '%" + srg + "%') OR Tur='" + srg2 + "'";
+                string sorgu = "Select ID,FirmaAdi,Ad,Soyad,Telefon,Email,Adres,Ilce,Il From Musteri where (FirmaAdi like '%" + srg + "%' OR Ad Like '%" + srg + "%') OR Tur='" + srg2 + "'";
                 SqlDataAdapter adap = new SqlDataAdapter(sorgu, bgl.baglanti());
                 DataSet ds = new DataSet();
                 adap.Fill(ds);
@@ -71,7 +71,7 @@ namespace TeknikServis
             }
             else
             {
-                string sorgu = "Select * from Musteri where (FirmaAdi like '%" + srg + "%' OR Ad Like '%" + srg + "%')";
+                string sorgu = "Select ID,FirmaAdi,Ad,Soyad,Telefon,Email,Adres,Ilce,Il From Musteri where (FirmaAdi like '%" + srg + "%' OR Ad Like '%" + srg + "%')";
                 SqlDataAdapter adap = new SqlDataAdapter(sorgu, bgl.baglanti());
                 DataSet ds = new DataSet();
                 adap.Fill(ds);

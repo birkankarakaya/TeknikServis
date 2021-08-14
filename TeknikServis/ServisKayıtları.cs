@@ -44,10 +44,34 @@ namespace TeknikServis
         private void button2_Click(object sender, EventArgs e)
         {
             string srg = txtYetkili.Text;
+            DateTime dateTime = dtTarih.Value;
             DataTable dt1 = new DataTable();
-            SqlDataAdapter da1 = new SqlDataAdapter("Select * from Rapor where (Yetkili like '%" + srg + "%') " , bgl.baglanti());
+            SqlDataAdapter da1 = new SqlDataAdapter("Select ID, Unvan,Yetkili,Adres,Ilce,Il,Telefon,CihazSeriNo,Marka,Model,Durum From Rapor where (Yetkili like '%" + srg + "%') OR (AlinanTarih like '%"+dateTime+"%') ORDER BY AlinanTarih DESC ", bgl.baglanti());
             da1.Fill(dt1);
             dataGridView1.DataSource = dt1;
+
+            //Gelen Verileri koşullu renklendirme
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                DataGridViewCellStyle renk = new DataGridViewCellStyle();
+                if ((dataGridView1.Rows[i].Cells[10].Value.ToString()) == "Tamamlandı     ")
+                {
+                    renk.BackColor = Color.LightGreen;
+                }
+                else if ((dataGridView1.Rows[i].Cells[10].Value.ToString()) == "Onay bekliyor  ")
+                {
+                    renk.BackColor = Color.Yellow;
+                }
+                else if ((dataGridView1.Rows[i].Cells[10].Value.ToString()) == "Teslim Edildi  ")
+                {
+                    renk.BackColor = Color.LightSkyBlue;
+                }
+                else if ((dataGridView1.Rows[i].Cells[10].Value.ToString()) == "Teslim Alındı  ")
+                {
+                    renk.BackColor = Color.LightPink;
+                }
+                dataGridView1.Rows[i].DefaultCellStyle = renk;
+            }
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

@@ -131,10 +131,6 @@ namespace TeknikServis
                 }
                 dataGridView1.Rows[i].DefaultCellStyle = renk;
             }
-
-
-
-
         }
 
         public string unvan, yetkili, adres, ilce, il, telefon, email;
